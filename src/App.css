@@ -1,38 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  background-image: url(./assets/images/movil-sea.jpg);
+  background-size: cover;
+}
+
+:root{
+  --main-color: rgb(150, 39, 214);
+  --secundary-color: rgb(243, 96, 96);
+  --p-color:white;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wheather{
+  background: black;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  padding: 1.5rem 0 1rem;
+  width: 21rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px 10px;
+  opacity: 90%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title{
+  font-family: 'MuseoModerno', cursive;
+  color: var(--main-color);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.place{
+  color: var(--secundary-color);
+  font-size: 16px;
+}
+
+.grades{
+  height: 70%;
+  padding-bottom: 12px;
+  /* background: red; */
+}
+
+.grades img{
+  width: 100%;
+}
+
+.grades p{
+  font-weight: bold;
+  font-size: 14px;
+  color: var(--p-color);
+}
+
+.info-container{
+  /* background-color: gray; */
+  padding: 1rem 1.2rem 0;
+}
+
+#main-weather{
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 15px;
+  color: var(--main-color);
+}
+
+.info-container p{
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--p-color);
+}
+
+.info-container p span{
+  font-weight: bold;
+  font-size: 13.5px;
+  color: var(--secundary-color);
+}
+
+.description-container{
+  justify-content: space-between;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 1.5rem;
+}
+
+.wheather button{
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 1px 1px 8px var(--main-color);
+  background: var(--main-color);
   color: white;
+  padding: 8px;
+  opacity: 75%;
 }
 
-.App-link {
-  color: #61dafb;
+.wheather button i{
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wheather button p{
+  font-size: 8px;
+}
+
+@media screen and (min-width: 768px){
+  body{
+    background-image: url(./assets/images/desk-seaview.jpg);
+    background-size: cover;
   }
-  to {
-    transform: rotate(360deg);
+
+  .wheather{
+    background: white;
+    width: 35%;
+    opacity: 85%;
+  }
+
+  .title{
+    font-size: 1.5rem;
+  }
+
+  .place{
+    font-size: 18px;
+  }
+
+  .description-container{
+    justify-content: space-around;
+  }
+
+  .grades{
+    width: 35%;
+  }
+
+  .grades img{
+    width: 100%;
+  }
+  
+  .grades p{
+    font-size: 17px;
+    color: black;
+  }
+
+  #main-weather{
+    font-size: 16px;
+  }
+  
+  .info-container p{
+    font-size: 15px;
+    color: black;
+  }
+  
+  .info-container p span{
+    font-size: 15px;
+  }
+
+  /*  */
+  
+  .wheather button{
+    opacity: 85%;
+  }
+
+  .wheather button:hover{
+    cursor: pointer;
+    opacity: 100%;
+    width: 5.6rem;
+  }
+  
+  .wheather button i{
+    font-size: 1.2rem;
+  }
+  
+  .wheather button p{
+    font-size: 8.5px;
   }
 }
